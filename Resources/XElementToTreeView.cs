@@ -1,9 +1,9 @@
 namespace SharpExtensions
 {
-  public static class XElementToTreeView
+	public static class XElementToTreeView
 	{
-    public static void FromXElement(this TreeView T_View, XElement XElem , TreeNode ParentNode = null)
-  	{
+   	 	public static void FromXElement(this TreeView T_View, XElement XElem , TreeNode ParentNode = null)
+  		{
 			// Create temporarty node
 			var TempNode = new TreeNode(XElem.Name.LocalName);
 			
@@ -50,5 +50,5 @@ namespace SharpExtensions
 				XElem.Elements().ForEach(XEChild => FromXElement(T_View, XEChild, TempParentNode));
 			}
 		}
-  }  
+  	}  
 }
